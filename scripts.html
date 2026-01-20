@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Scripts - LEO SCRIPTS</title>
+    <title>SCRIPTS - LEO SCRIPTS</title>
     <style>
         body { 
             background-image: url('Gemini_Generated_Image_m8xqmhm8xqmhm8xq.png'); 
@@ -11,50 +11,136 @@
             background-position: center;
             background-attachment: fixed;
             font-family: 'Segoe UI', sans-serif; 
-            color: white; 
             margin: 0; 
-            text-align: center;
+            color: white;
         }
+
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7); 
+            background: rgba(0, 0, 0, 0.85); 
             z-index: -1;
         }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
-        .script-box { 
-            background: rgba(20, 20, 20, 0.9); 
-            border: 1px solid #00f2ff; 
-            padding: 20px; 
-            border-radius: 10px; 
-            margin-bottom: 20px;
+
+        .header-title {
+            padding: 50px 20px;
+            text-align: center;
+            color: #00f2ff;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 0 0 20px #00f2ff;
+            text-transform: uppercase;
         }
-        .btn-copy { 
-            background: #00f2ff; 
-            color: #000; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            cursor: pointer; 
+
+        .script-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espaçamento entre os scripts */
         }
-        .back-link { color: #00f2ff; text-decoration: none; display: block; margin-top: 20px; }
+
+        .script-item {
+            background: rgba(25, 25, 25, 0.9);
+            border: 1px solid #333;
+            border-left: 4px solid #00f2ff;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .script-item:hover {
+            border-color: #00f2ff;
+            background: rgba(35, 35, 35, 1);
+            transform: translateX(10px);
+        }
+
+        .script-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .btn-copy {
+            background: #00f2ff;
+            color: #000;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-copy:hover {
+            background: #fff;
+            box-shadow: 0 0 15px #fff;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin: 50px auto;
+            color: #00f2ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>SCRIPTS DISPONÍVEIS</h1>
+    <div class="header-title">SCRIPTS</div>
 
-    <div class="container">
-        <div class="script-box">
-            <h3>VELOCITY HUB</h3>
-            <p>Clique abaixo para copiar o script:</p>
-            <button class="btn-copy" onclick="alert('Script Copiado!')">COPIAR</button>
-        </div>
+    <div class="script-list">
         
-        <a href="index.html" class="back-link">← Voltar</a>
+        <div class="script-item">
+            <div class="script-name">1-(BEDWARS)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/MAPS-BedWars-Cat-Vape-Best-Bedwars-Script-46512\'))()')">COPIAR</button>
+        </div>
+
+        <div class="script-item">
+            <div class="script-name">2-(INFINITE YIELD)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\'))()')">COPIAR</button>
+        </div>
+
+        <div class="script-item">
+            <div class="script-name">3-(ESP+AIMBOT)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-Universal-aimbot-gui-45287\'))()')">COPIAR</button>
+        </div>
+
+        <div class="script-item">
+            <div class="script-name">4-(BLOX FRUIT)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet((\'https://raw.githubusercontent.com/ThunderZ-05/HUB/main/TestKey\')))()')">COPIAR</button>
+        </div>
+
+        <div class="script-item">
+            <div class="script-name">5-(EMOTES=APENAS AURA)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-AURA-FARMING-EMOTE-MOLYN-79501\'))()')">COPIAR</button>
+        </div>
+
+        <div class="script-item">
+            <div class="script-name">6-(TODOS EMOTES)</div>
+            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592\'))()')">COPIAR</button>
+        </div>
+
     </div>
+
+    <a href="index.html" class="back-btn">← VOLTAR AO INÍCIO</a>
+
+    <script>
+        function copyScript(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Script copiado com sucesso!");
+            });
+        }
+    </script>
 
 </body>
 </html>
