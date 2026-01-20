@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCRIPTS - LEO SCRIPTS</title>
+    <title>LEO SCRIPTS - OFICIAL</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -13,146 +13,58 @@
             background-size: cover; 
             background-position: center;
             background-attachment: fixed;
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Orbitron', sans-serif; /* Fonte futurista */
             margin: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
             color: white;
         }
 
+        /* Camada de escurecimento para dar contraste */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); 
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
             z-index: -1;
         }
 
-        .header-title {
-            padding: 50px 20px;
+        .main-container {
             text-align: center;
-            color: #00f2ff;
-            font-size: 45px;
-            font-weight: bold;
-            text-shadow: 0 0 20px #00f2ff;
-            text-transform: uppercase;
+            animation: fadeIn 1.5s ease-out;
         }
 
-        .script-list {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .script-item {
-            background: rgba(25, 25, 25, 0.9);
-            border: 1px solid #333;
-            border-left: 4px solid #00f2ff;
-            border-radius: 10px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        .script-item:hover {
-            border-color: #00f2ff;
-            background: rgba(35, 35, 35, 1);
-            transform: translateX(10px);
-        }
-
-        .script-name {
-            font-size: 18px;
-            font-weight: bold;
+        /* Título Grande e Caprichado */
+        header h1 { 
+            font-size: 80px; /* Tamanho bem grande */
+            margin: 0;
+            padding: 0;
+            letter-spacing: 10px;
             color: #fff;
-        }
-
-        .btn-copy {
-            background: #00f2ff;
-            color: #000;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
+            text-shadow: 
+                0 0 10px #00f2ff,
+                0 0 20px #00f2ff,
+                0 0 40px #00f2ff,
+                0 0 80px #00f2ff;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        .btn-copy:hover {
-            background: #fff;
-            box-shadow: 0 0 15px #fff;
-        }
-
-        /* Estilo da Seção Discord */
-        .discord-box {
-            max-width: 400px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(88, 101, 242, 0.15);
-            border: 1px solid #5865F2;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .btn-discord {
-            display: inline-block;
-            background: #5865F2;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: 0.3s;
-        }
-
-        .btn-discord:hover {
-            background: #4752c4;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
-        }
-
-        .back-btn {
-            display: block;
-            text-align: center;
-            margin: 30px auto;
+        header p {
+            font-size: 20px;
             color: #00f2ff;
-            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: -10px;
+            margin-bottom: 50px;
             font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
         }
-    </style>
-</head>
-<body>
 
-    <div class="header-title">SCRIPTS</div>
-
-    <div class="script-list">
-        <div class="script-item">
-            <div class="script-name">1-(BEDWARS)</div>
-            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/MAPS-BedWars-Cat-Vape-Best-Bedwars-Script-46512\'))()')">COPIAR</button>
-        </div>
-
-        <div class="script-item">
-            <div class="script-name">2-(INFINITE YIELD)</div>
-            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\'))()')">COPIAR</button>
-        </div>
-
-        <div class="script-item">
-            <div class="script-name">3-(ESP+AIMBOT)</div>
-            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-Universal-aimbot-gui-45287\'))()')">COPIAR</button>
-        </div>
-
-        <div class="script-item">
-            <div class="script-name">4-(BLOX FRUIT)</div>
-            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet((\'https://raw.githubusercontent.com/ThunderZ-05/HUB/main/TestKey\')))()')">COPIAR</button>
-        </div>
-
-        <div class="script-item">
-            <div class="script-name">5-(EMOTES=APENAS AURA)</div>
-            <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-AURA-FARMING-EMOTE-MOLYN-79501\'))()')">COPIAR</button>
-        </div>
-
-        <div class="script-item">
+        /* Botão de Scripts Estilizado */
+        .btn-scripts { 
+            display: inline-block; 
+            background: transparent;
