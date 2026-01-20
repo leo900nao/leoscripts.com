@@ -16,6 +16,9 @@
             font-family: 'Segoe UI', sans-serif; 
             margin: 0; 
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         body::before {
@@ -27,30 +30,29 @@
         }
 
         .header-title {
-            padding: 50px 20px;
-            text-align: center;
+            padding: 40px 20px;
             color: #00f2ff;
-            font-size: 45px;
+            font-size: 40px;
             font-weight: bold;
             text-shadow: 0 0 20px #00f2ff;
             text-transform: uppercase;
         }
 
         .script-list {
+            width: 90%;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
         .script-item {
             background: rgba(25, 25, 25, 0.9);
             border: 1px solid #333;
             border-left: 4px solid #00f2ff;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 8px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,40 +61,61 @@
 
         .script-item:hover {
             border-color: #00f2ff;
-            background: rgba(35, 35, 35, 1);
-            transform: translateX(10px);
-        }
-
-        .script-name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
+            transform: scale(1.02);
         }
 
         .btn-copy {
             background: #00f2ff;
             color: #000;
             border: none;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 5px;
             font-weight: bold;
             cursor: pointer;
-            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* Seção Comunidade Discord */
+        .discord-box {
+            width: 90%;
+            max-width: 400px;
+            background: rgba(88, 101, 242, 0.2);
+            border: 1px solid #5865F2;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-discord {
+            display: inline-block;
+            background: #5865F2;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
             transition: 0.3s;
         }
 
-        .btn-copy:hover {
-            background: #fff;
-            box-shadow: 0 0 15px #fff;
+        .btn-discord:hover {
+            background: #4752c4;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.6);
         }
 
         .back-btn {
-            display: block;
-            text-align: center;
-            margin: 50px auto;
+            margin: 30px 0;
             color: #00f2ff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 16px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            border-bottom: 2px solid #00f2ff;
         }
     </style>
 </head>
@@ -101,37 +124,40 @@
     <div class="header-title">SCRIPTS</div>
 
     <div class="script-list">
-        
         <div class="script-item">
-            <div class="script-name">1-(BEDWARS)</div>
+            <span>1-(BEDWARS)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/MAPS-BedWars-Cat-Vape-Best-Bedwars-Script-46512\'))()')">COPIAR</button>
         </div>
 
         <div class="script-item">
-            <div class="script-name">2-(INFINITE YIELD)</div>
+            <span>2-(INFINITE YIELD)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source\'))()')">COPIAR</button>
         </div>
 
         <div class="script-item">
-            <div class="script-name">3-(ESP+AIMBOT)</div>
+            <span>3-(ESP+AIMBOT)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-Universal-aimbot-gui-45287\'))()')">COPIAR</button>
         </div>
 
         <div class="script-item">
-            <div class="script-name">4-(BLOX FRUIT)</div>
+            <span>4-(BLOX FRUIT)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet((\'https://raw.githubusercontent.com/ThunderZ-05/HUB/main/TestKey\')))()')">COPIAR</button>
         </div>
 
         <div class="script-item">
-            <div class="script-name">5-(EMOTES=APENAS AURA)</div>
+            <span>5-(EMOTES=APENAS AURA)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-AURA-FARMING-EMOTE-MOLYN-79501\'))()')">COPIAR</button>
         </div>
 
         <div class="script-item">
-            <div class="script-name">6-(TODOS EMOTES)</div>
+            <span>6-(TODOS EMOTES)</span>
             <button class="btn-copy" onclick="copyScript('loadstring(game:HttpGet(\'https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592\'))()')">COPIAR</button>
         </div>
+    </div>
 
+    <div class="discord-box">
+        <div style="font-size: 14px; font-weight: bold;">COMUNIDADE</div>
+        <a href="https://discord.gg/Q7JyezHwnt" target="_blank" class="btn-discord">ENTRAR NO DISCORD</a>
     </div>
 
     <a href="index.html" class="back-btn">← VOLTAR AO INÍCIO</a>
